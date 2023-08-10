@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "lrlib",
+  "version": "${version}",
+  "name": "LRLib",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.lynix.lrlib.LRLib"
+    ]
+  },
+  "mixins": [
+    "lrlib.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
+}
