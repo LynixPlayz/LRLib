@@ -21,7 +21,7 @@ public class WorldRendererMixin {
     @Inject(method = "render", at = @At("RETURN"))
     private void render_return(MatrixStack matrices, float tickDelta, long limitTime, boolean renderBlockOutline, Camera camera, GameRenderer gameRenderer,
                                LightmapTextureManager lightmapTextureManager, Matrix4f matrix4f, CallbackInfo callback) {
-        Renderer.drawBoxFill(new Box(0, 70, 0, 1, 71, 1), QuadColor.single(Color.red.getRGB()));
+        //Renderer.drawBoxFill(new Box(0, 70, 0, 1, 71, 1), QuadColor.single(Color.red.getRGB()));
     }
 
 }
