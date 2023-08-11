@@ -66,15 +66,20 @@ jar {
 // configure the maven publication
 publishing {
     publications {
-        maven(MavenPublication) {
-            groupId = 'me.lynix'
-            artifactId = 'lrlib'
-            version = "0.9-SNAPSHOT"
-            from components.java
-
-            pom {
-                description = 'A description of my library'
+        mavenJava(MavenPublication) {
+            // add all the jars that should be included when publishing to maven
+            artifact(remapJar) {
+                builtBy remapJar
+            }
+            artifact(sourcesJar) {
+                builtBy remapSourcesJar
             }
         }
+    }
+
+    // select the repositories you want to publish to
+    repositories {
+        // uncomment to publish to the local maven
+        // mavenLocal()
     }
 }
