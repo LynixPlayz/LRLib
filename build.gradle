@@ -67,13 +67,14 @@ jar {
 publishing {
     publications {
         maven(MavenPublication) {
+            groupId = 'me.lynix'
+            artifactId = 'lrlib'
+            version = "0.9-SNAPSHOT"
             from components.java
-        }
-    }
 
-    repositories {
-        maven {
-            url "https://jitpack.io"
+            pom {
+                description = 'A description of my library'
+            }
         }
     }
 }
